@@ -30,6 +30,7 @@ using System.Windows.Forms;
 
 using MetroFramework.Components;
 using MetroFramework.Interfaces;
+using MetroFramework.MessageBox;
 
 namespace MetroFramework.Design.Components
 {
@@ -92,7 +93,7 @@ namespace MetroFramework.Design.Components
             {
                 if (styleManager.Owner == null)
                 {
-                    MessageBox.Show("StyleManager needs the Owner property assigned to before it can reset styles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    System.Windows.Forms.MessageBox.Show("StyleManager needs the Owner property assigned to before it can reset styles.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
             }

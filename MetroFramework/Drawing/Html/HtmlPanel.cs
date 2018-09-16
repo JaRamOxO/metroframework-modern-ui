@@ -39,6 +39,18 @@ namespace MetroFramework.Drawing.Html
     public class HtmlPanel
         : ScrollableControl
     {
+        public class LinkClickEventArgs : EventArgs
+        {
+            public string Href;
+            public bool Handled = false;
+        }
+
+        public delegate void LinkClickEventHandler(object sender, LinkClickEventArgs e);
+
+        #region Events
+        public event LinkClickEventHandler LinkClick;
+        #endregion
+
         #region Fields
         protected InitialContainer htmlContainer;
 
@@ -204,7 +216,18 @@ namespace MetroFramework.Drawing.Html
                 RectangleF rect = htmlContainer.LinkRegions[box];
                 if (Rectangle.Round(rect).Contains(e.X, e.Y))
                 {
-                    CssValue.GoLink(box.GetAttribute("href", string.Empty));
+                    //Edit start
+                    //CssValue.GoLink(box.GetAttribute("href", string.Empty));
+                    string href = box.GetAttribute("href", string.Empty);
+                    if (LinkClick != null)
+                    {
+                        LinkClickEventArgs ev = new LinkClickEventArgs();
+                        ev.Href = href;
+                        LinkClick(this, ev);
+                        if (ev.Handled) return;
+                    }
+                    CssValue.GoLink(href);
+                    //Edit End
                     return;
                 }
             }
