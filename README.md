@@ -53,6 +53,10 @@ Controls supported
 * DateTimePicker
 * Grid
 
+* HtmlPanel
+* HtmlLabel
+* HtmlToolTip
+
 Components supported
 ------------------
 * StyleExtender (Apply theme propertys to none framework controls)
