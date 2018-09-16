@@ -21,9 +21,10 @@ namespace MetroFramework.MessageBox
         /// <param name="owner"></param>
         /// <param name="message"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, Boolean NoSound = false)
-        { return Show(owner, message, "Notification", 211, NoSound); }
+        public static DialogResult Show(IWin32Window owner, String message, Boolean noSound = false)
+        { return Show(owner, message, "Notification", 211, noSound); }
 
         /// <summary>
         /// Shows a metro-styles message notification into the specified owner window.
@@ -31,20 +32,10 @@ namespace MetroFramework.MessageBox
         /// <param name="owner"></param>
         /// <param name="message"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message,int height, Boolean NoSound = false)
-        { return Show(owner, message, "Notification", height, NoSound); }
-
-        /// <summary>
-        /// Shows a metro-styles message notification into the specified owner window.
-        /// </summary>
-        /// <param name="owner"></param>
-        /// <param name="message"></param>
-        /// <param name="title"></param>
-        /// <param name="height" optional=211></param>
-        /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, Boolean NoSound = false)
-        { return Show(owner, message, title, MessageBoxButtons.OK, 211, NoSound); }
+        public static DialogResult Show(IWin32Window owner, String message,int height, Boolean noSound = false)
+        { return Show(owner, message, "Notification", height, noSound); }
 
         /// <summary>
         /// Shows a metro-styles message notification into the specified owner window.
@@ -53,9 +44,10 @@ namespace MetroFramework.MessageBox
         /// <param name="message"></param>
         /// <param name="title"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, int height, Boolean NoSound = false)
-        { return Show(owner, message, title, MessageBoxButtons.OK, height, NoSound); }
+        public static DialogResult Show(IWin32Window owner, String message, String title, Boolean noSound = false)
+        { return Show(owner, message, title, MessageBoxButtons.OK, 211, noSound); }
 
         /// <summary>
         /// Shows a metro-styles message notification into the specified owner window.
@@ -63,11 +55,11 @@ namespace MetroFramework.MessageBox
         /// <param name="owner"></param>
         /// <param name="message"></param>
         /// <param name="title"></param>
-        /// <param name="buttons"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, Boolean NoSound = false)
-        { return Show(owner, message, title, buttons, MessageBoxIcon.None, 211, NoSound); }
+        public static DialogResult Show(IWin32Window owner, String message, String title, int height, Boolean noSound = false)
+        { return Show(owner, message, title, MessageBoxButtons.OK, height, noSound); }
 
         /// <summary>
         /// Shows a metro-styles message notification into the specified owner window.
@@ -77,9 +69,10 @@ namespace MetroFramework.MessageBox
         /// <param name="title"></param>
         /// <param name="buttons"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, int height, Boolean NoSound = false)
-        { return Show(owner, message, title, buttons, MessageBoxIcon.None, height, NoSound); }
+        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, Boolean noSound = false)
+        { return Show(owner, message, title, buttons, MessageBoxIcon.None, 211, noSound); }
 
         /// <summary>
         /// Shows a metro-styles message notification into the specified owner window.
@@ -88,11 +81,11 @@ namespace MetroFramework.MessageBox
         /// <param name="message"></param>
         /// <param name="title"></param>
         /// <param name="buttons"></param>
-        /// <param name="icon"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, Boolean NoSound = false)
-        { return Show(owner, message, title, buttons, icon, MessageBoxDefaultButton.Button1, 211, NoSound); }
+        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, int height, Boolean noSound = false)
+        { return Show(owner, message, title, buttons, MessageBoxIcon.None, height, noSound); }
 
         /// <summary>
         /// Shows a metro-styles message notification into the specified owner window.
@@ -103,11 +96,26 @@ namespace MetroFramework.MessageBox
         /// <param name="buttons"></param>
         /// <param name="icon"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, int height, Boolean NoSound = false)
-        { return Show(owner, message, title, buttons, icon, MessageBoxDefaultButton.Button1, height, NoSound); }
+        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, Boolean noSound = false)
+        { return Show(owner, message, title, buttons, icon, MessageBoxDefaultButton.Button1, 211, noSound); }
 
-           /// <summary>
+        /// <summary>
+        /// Shows a metro-styles message notification into the specified owner window.
+        /// </summary>
+        /// <param name="owner"></param>
+        /// <param name="message"></param>
+        /// <param name="title"></param>
+        /// <param name="buttons"></param>
+        /// <param name="icon"></param>
+        /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
+        /// <returns></returns>
+        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, int height, Boolean noSound = false)
+        { return Show(owner, message, title, buttons, icon, MessageBoxDefaultButton.Button1, height, noSound); }
+
+        /// <summary>
         /// Shows a metro-styles message notification into the specified owner window.
         /// </summary>
         /// <param name="owner"></param>
@@ -117,10 +125,11 @@ namespace MetroFramework.MessageBox
         /// <param name="icon"></param>
         /// <param name="defaultbutton"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultbutton, Boolean NoSound = false)
+        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultbutton, Boolean noSound = false)
         {
-            return Show(owner, message, title, buttons, icon, defaultbutton, 211, NoSound);
+            return Show(owner, message, title, buttons, icon, defaultbutton, 211, noSound);
         }
 
         /// <summary>
@@ -133,8 +142,9 @@ namespace MetroFramework.MessageBox
         /// <param name="icon"></param>
         /// <param name="defaultbutton"></param>
         /// <param name="height" optional=211></param>
+        /// <param name="noSound" optional = false>Set to true to disable sound spawn when dialog show</param>
         /// <returns></returns>
-        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultbutton, int height, Boolean NoSound = false)
+        public static DialogResult Show(IWin32Window owner, String message, String title, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultbutton, int height, Boolean noSound = false)
         {
             DialogResult _result = DialogResult.None;
 
@@ -162,7 +172,7 @@ namespace MetroFramework.MessageBox
                 //    _owner.Location = new Point(x, y);
                 //}
 
-                if (!NoSound)
+                if (!noSound)
                 {
                     switch (icon)
                     {
