@@ -3,9 +3,9 @@ MetroFramework - WinForms on steroids.
 
 Brings the new Modern UI alias Metro UI of Windows 8 to .NET Windows Forms applications. 
 
-Install via NuGet 
+Install via NuGet (Dennis Magno, http://github.com/dennismagno release 1.4.0)
 ------------------
-    Install-Package MetroModernUI
+    Install-Package MetroModernUI -Version 1.4.0
 
 [Updated to Version 1.4.0](http://denricdenise.info/2016/07/metroframework-modern-ui-version-1-4-0/)
 Link: https://www.nuget.org/packages/MetroModernUI/
@@ -52,6 +52,10 @@ Controls supported
 * MessageBox
 * DateTimePicker
 * Grid
+
+* HtmlPanel
+* HtmlLabel
+* HtmlToolTip
 
 Components supported
 ------------------
