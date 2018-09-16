@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MetroFramework
+namespace MetroFramework.MessageBox
 {
     /// <summary>
     /// Message box overlay display properties.
