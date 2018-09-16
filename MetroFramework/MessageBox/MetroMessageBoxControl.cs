@@ -11,7 +11,7 @@ using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework.Localization;
 
-namespace MetroFramework
+namespace MetroFramework.MessageBox
 {
     public partial class MetroMessageBoxControl : Form
     {

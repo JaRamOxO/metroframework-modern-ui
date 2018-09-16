@@ -1,4 +1,4 @@
-﻿namespace MetroFramework
+﻿namespace MetroFramework.MessageBox
 {
     partial class MetroMessageBoxControl
     {
