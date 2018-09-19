@@ -53,6 +53,11 @@ namespace MetroFramework.Components
 
                 metroStyle = value;
 
+                if (Extender != null)
+                {
+                    Extender.Style = metroStyle;
+                }
+
                 if (!isInitializing)
                 {
                     Update();
@@ -74,6 +79,11 @@ namespace MetroFramework.Components
                 }
 
                 metroTheme = value;
+
+                if (Extender != null)
+                {
+                    Extender.Theme = metroTheme;
+                }
 
                 if (!isInitializing)
                 {
@@ -106,6 +116,8 @@ namespace MetroFramework.Components
                 }
             }
         }
+
+        public MetroStyleExtender Extender { get; set; }
 
         #endregion
 
